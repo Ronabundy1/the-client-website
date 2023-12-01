@@ -1,0 +1,550 @@
+/* Kleuren */
+:root {
+    --primary-color: #7faec5;
+    --secondary-color: #4ecd5d;
+    --dark-blue: #384b61;
+    --paragraph-color: #446867;
+    --light-grey: #919EA1;
+}
+
+/* Lettertypen */
+:root {
+    --body-font: 'Open Sans', sans-serif;
+    --title-font: 'Raleway', sans-serif;
+}
+
+/* Randen */
+:root {
+    --sharp-corners: 5px;
+    --round-corners: 8px;
+    --extra-round-corners: 20px;
+}
+
+/* Overgangen */
+:root {
+    --color-transition: all 300ms ease 0s;
+    --background-transition: background-color 400ms ease 0s;
+}
+
+/* Schaduwen */
+:root {
+    --light-shadow: -1px 0 4px rgba(14, 55, 63, 0.15);
+    --article-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+/* Groottes */
+:root {
+    --section-title: 3rem;
+    --section-subtitle: 2rem;
+    --small-subtitle: 1.8rem;
+    --article-title: 2.5rem;
+    --small-p: 1.3rem;
+    --smaller-p: 1.25rem;
+    --large-p: 1.5rem;
+    --smaller-font-size: 1.2rem;
+    --alinea: 20px;
+}
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: var(--body-font);
+}
+
+
+p {
+    color: var(--dark-blue);
+}
+
+/* Navbar */
+.navbar, .solid {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    height: 6rem;
+    transition: var(--background-transition);
+}
+
+.solid {
+    box-shadow: var(--light-shadow);
+    background-color: #fff;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.logo img {
+    width: 8rem;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+/* Contact button */
+nav li:last-child a:last-child {
+    background-color: var(--green);
+    border-radius: var(--round-corners);
+    padding: 1rem;
+    color: #fff;
+    transition: background-color 500ms ease-out;
+}
+
+nav li:last-child:hover a:last-child:hover {
+    background: var(--dark-blue);
+}
+
+/* Navbar links */
+nav a {
+    text-decoration: none;
+    color: var(--light-blue);
+    transition: var(--color-transition);
+    font-size: var(--small-p);
+}
+
+nav a:hover {
+    color: var(--green);
+}
+
+
+/* section neemt het gehele viewport in beslag */
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+
+/* landing page */
+#home {
+    display: flex;
+    justify-content: center;
+    margin-top: -6rem;
+    /*wave pattern*/
+    clip-path: polygon(100% 0%, 0% 0% , 0.00% 97.54%, 2.00% 97.47%, 4.00% 97.26%, 6.00% 96.92%, 8.00% 96.46%, 10.00%
+    95.89%, 12.00% 95.22%, 14.00% 94.48%, 16.00% 93.67%, 18.00% 92.83%, 20.00% 91.98%, 22.00% 91.13%, 24.00% 90.32%,
+    26.00% 89.56%, 28.00% 88.87%, 30.00% 88.28%, 32.00% 87.79%, 34.00% 87.42%, 36.00% 87.18%, 38.00% 87.08%, 40.00%
+    87.12%, 42.00% 87.29%, 44.00% 87.60%, 46.00% 88.04%, 48.00% 88.59%, 50.00% 89.23%, 52.00% 89.96%, 54.00% 90.75%,
+    56.00% 91.59%, 58.00% 92.44%, 60.00% 93.29%, 62.00% 94.11%, 64.00% 94.89%, 66.00% 95.59%, 68.00% 96.21%, 70.00%
+    96.72%, 72.00% 97.12%, 74.00% 97.39%, 76.00% 97.52%, 78.00% 97.52%, 80.00% 97.37%, 82.00% 97.10%, 84.00% 96.69%,
+    86.00% 96.17%, 88.00% 95.54%, 90.00% 94.83%, 92.00% 94.05%, 94.00% 93.22%, 96.00% 92.37%, 98.00% 91.52%, 100.00%
+    90.69%);
+
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.introduction h1 {
+    font-size: 5rem;
+    color: var(--darkblue);
+    font-family: var(--title-font);
+}
+
+.introduction h2 {
+    font-size: 2rem;
+    color: var(--lightblue);
+    font-family: var(--title-font);
+    font-weight: 600;
+}
+
+.home-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.introduction a {
+    display: flex;
+    transition: var(--color-transition);
+    background-color: var(--green);
+    border-radius: var(--round-corners);
+    font-family: var(--title-font);
+    color: #fff;
+    width: 10rem;
+    height: 3rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+}
+
+.introduction a:hover {
+    background: var(--darkblue);
+}
+
+/* Welkom sectie */
+#welkom {
+    display: flex;
+    padding: 100px;
+    gap: 100px;
+    justify-content: center;
+}
+
+#welkom img {
+
+}
+
+#welkom h2 {
+    font-size: var(--section-title);
+    color: var(--lightblue);
+    margin-bottom: 1rem;
+}
+
+#welkom h3 {
+    font-size: var(--section-subtitle);
+    color: var(--darkblue);
+    margin-bottom: 1rem;
+}
+
+#welkom p {
+    font-size: var(--small-p);
+}
+
+
+
+.welkom-text-wrapper {
+    width: 40rem;
+}
+
+.project-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+/* Stijl voor de titel */
+.project-wrapper h3 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Stijl voor de alinea's */
+.whatisbrain-text-wrapper p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+
+
+
+#whatisbrain img {
+    height: 30rem;
+}
+
+#whatisbrain article h3 {
+    font-size: var(--article-title);
+    color: var(--darkblue);
+    margin-bottom: 25px;
+}
+
+#whatisbrain article p {
+    font-size: var(--small-p);
+    margin-bottom: var(--alinea);
+
+}
+
+
+#app {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    height: 110vh;
+}
+
+.app-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--alinea);
+    width: 40rem;
+}
+
+.app-text-wrapper p{
+    margin-bottom: var(--alinea);
+}
+
+#app img {
+    width: 20rem;
+    height: 40rem;
+}
+
+#app h2 {
+    font-size: var(--section-title);
+    color: var(--lightblue);
+}
+
+#app p {
+    font-size: var(--small-p);
+}
+
+.over-wrapper a {
+    display: flex;
+    background-color: var(--green);
+    border-radius: var(--round-corners);
+    font-family: var(--title-font);
+    color: #fff;
+    transition: var(--color-transition);
+    width: 12rem;
+    height: 3rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.over-wrapper a:hover {
+    background: var(--darkblue);
+}
+
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+#contact h2,
+#contact h3 {
+    font-size: var(--article-title);
+    color: var(--darkblue);
+    margin-bottom: 30px;
+}
+
+#contact h4 {
+    font-size: var(--article-title);
+    color: var(--lightblue);
+    margin-bottom: 10px;
+}
+
+#contact a {
+    font-size: var(--large-p);
+    color: var(--p-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/*footer*/
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40vh;
+    background-color: #fff;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+.footer-text-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0 8rem 3rem 8rem;
+}
+
+.footer-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-text a{
+    font-size: var(--small-p);
+    color: var(--p-color);
+}
+
+.footer-text a:nth-of-type(1) {
+    color: var(--darkblue);
+    font-weight: 600;
+}
+
+.footer-rights {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 8rem 0 8rem;
+}
+
+.footer-rights p,
+.footer-rights-links a{
+    color: var(--lightgrey);
+}
+
+.footer-rights-links a:nth-of-type(1) {
+    margin-right: 1rem;
+}
+
+
+.scroll-up {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    font-size: 30px;
+    background-color: var(--green);
+    color: white;
+    border-radius: var(--round-corners);
+    transition: var(--color-transition);
+    text-decoration: none;
+    width: 3.5rem;
+    height: 3.5rem;
+    text-align: center;
+    padding: 9px;
+}
+
+.scroll-up:hover {
+    background-color: var(--darkblue);
+}
+
+@media  screen and (max-width: 700px) {
+    nav {
+        display: none;
+    }
+
+    .mobile-navbar-icon {
+        border: none;
+        background-color: transparent;
+    }
+
+    .mobile-navbar-icon .bar
+    {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        background: var(--darkblue);
+        box-shadow: var(--light-shadow);
+        border-radius: 3px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #welkom {
+        gap: 80px;
+    }
+
+    #welkom img {
+        width: 20rem;
+        height: 30rem;
+    }
+
+    #welkom h2 {
+        margin-bottom: 2px;
+    }
+
+    #welkom h3 {
+        margin-bottom: 3px;
+    }
+
+    #welkom p {
+        font-size: var(--smaller-p);
+    }
+
+    #project {
+        height: 225vh;
+    }
+
+    .project-wrapper {
+        gap: 40px;
+    }
+
+    .project-wrapper article:nth-of-type(1){
+        width: 35rem;
+    }
+
+    .waarom-card {
+        background-color: #fff;
+        height: 40rem;
+        width: 85rem;
+        text-align: center;
+        padding: 100px;
+        box-shadow: var(--article-shadow);
+    }
+
+    #project img {
+        height: 30rem;
+    }
+
+    #project article p {
+        font-size: var(--smaller-p);
+        margin-bottom: 10px;
+    }
+
+    #project h2 {
+        margin-top: 7rem;
+    }
+
+    #project article h3 {
+        font-size: var(--small-subtitle);
+    }
+
+    .waarom-card {
+        height: 45rem;
+        width: 60rem;
+        padding: 100px;
+    }
+
+    #app {
+        gap: 45px;
+        height: 100vh;
+    }
+
+    #app img {
+        width: 15rem;
+        height: 30rem;
+    }
+
+    #ervaringen article {
+        height: 23rem;
+        width: 19rem;
+    }
+
+    .review-wrapper h3 {
+        font-size: var(--small-subtitle);
+    }
+
+}
+
+@media screen and (min-width: 1600px) {
+    #project {
+        height: 100vh;
+    }
+
+    #project h2 {
+        margin-top: 15rem;
+    }
+
+    #app {
+        height: 100vh;
+    }
+}
